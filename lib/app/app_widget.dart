@@ -10,7 +10,12 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Seventh',
-      theme: ThemeData(primarySwatch: AppColor.primaryColor),
+      theme: ThemeData(
+        primarySwatch: AppColor.primaryColor,
+        textTheme: const TextTheme(
+            headline1: TextStyle(color: Colors.white),
+            headline2: TextStyle(color: Colors.white)),
+      ),
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
     );

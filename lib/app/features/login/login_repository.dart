@@ -1,27 +1,23 @@
 import 'dart:convert';
 
-import 'package:http/http.dart';
+import 'package:seventh_prova_flutter/app/infra/http/http_client.dart';
 import 'package:seventh_prova_flutter/app/models/login_model.dart';
-import 'package:seventh_prova_flutter/app/models/token.dart';
+import 'package:seventh_prova_flutter/app/models/token_model.dart';
+import 'package:seventh_prova_flutter/app/util/enum/method_http.dart';
 
 class LoginRepository {
-  final Client client;
-  final String host = "mobiletest.seventh.com.br";
+  final HttpClient client;
   LoginRepository(this.client);
 
-  Future<Token> login(LoginModel login) async {
-    final uri = Uri(
-      host: host,
-      path: 'login',
-      scheme: "http",
-    );
+  Future<TokenModel> login(LoginModel login) async {
     try {
-      final result = await client.post(
-        uri,
-        headers: login.toJson(),
+      final result = await client.request(
+        path: "login",
+        method: MethodHttp.post,
+        body: login.toJson(),
       );
-      return Token.fromJson(jsonDecode(result.body));
-    } on Exception catch (e) {
+      return TokenModel.fromJson(jsonDecode(result.body));
+    } on Exception {
       throw Exception("Erro ao efetuar login, verifique suas credenciais");
     }
   }
