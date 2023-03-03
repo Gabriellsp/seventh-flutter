@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:seventh_prova_flutter/app/infra/http/http_client.dart';
+import 'package:seventh_prova_flutter/app/core/http/http_client.dart';
 import 'package:seventh_prova_flutter/app/models/video_model.dart';
 import 'package:seventh_prova_flutter/app/util/enum/method_http.dart';
 

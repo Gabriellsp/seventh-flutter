@@ -1,15 +1,14 @@
 import 'package:http/http.dart';
 import 'dart:convert';
 
-import 'package:seventh_prova_flutter/app/infra/http/http_client_interface.dart';
+import 'package:seventh_prova_flutter/app/core/http/http_client_interface.dart';
 import 'package:seventh_prova_flutter/app/util/enum/http_error.dart';
 import 'package:seventh_prova_flutter/app/util/enum/method_http.dart';
 
 class HttpClient implements HttpClientInterface {
-  final Client client;
-  final String host = "mobiletest.seventh.com.br";
-  HttpClient(this.client);
-
+  final Client _client;
+  final String host = "http://mobiletest.seventh.com.br";
+  HttpClient(Client client) : _client = client;
   @override
   Future<dynamic> request(
       {required String path,
@@ -26,14 +25,14 @@ class HttpClient implements HttpClientInterface {
     try {
       switch (method) {
         case MethodHttp.get:
-          futureResponse = client.get(Uri.parse(url), headers: defaultHeaders);
+          futureResponse = _client.get(Uri.parse(url), headers: defaultHeaders);
           break;
         case MethodHttp.post:
-          futureResponse = client.post(Uri.parse(url),
+          futureResponse = _client.post(Uri.parse(url),
               headers: defaultHeaders, body: jsonBody);
           break;
         case MethodHttp.put:
-          futureResponse = client.put(Uri.parse(url),
+          futureResponse = _client.put(Uri.parse(url),
               headers: defaultHeaders, body: jsonBody);
           break;
       }
@@ -44,7 +43,7 @@ class HttpClient implements HttpClientInterface {
     return _handleResponse(response);
   }
 
-  dynamic _handleResponse(Response response) {
+  Map<String, dynamic> _handleResponse(Response response) {
     switch (response.statusCode) {
       case 200:
         return response.body.isEmpty ? null : jsonDecode(response.body);
@@ -52,10 +51,6 @@ class HttpClient implements HttpClientInterface {
         throw HttpError.badRequest;
       case 401:
         throw HttpError.unauthorized;
-      case 403:
-        throw HttpError.forbidden;
-      case 404:
-        throw HttpError.notFound;
       default:
         throw HttpError.serverError;
     }
