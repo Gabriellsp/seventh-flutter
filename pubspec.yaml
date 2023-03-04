@@ -19,6 +19,7 @@ dependencies:
   http_interceptor: ^1.0.2
   chewie: ^1.4.0
   video_player: ^2.5.3
+  modular_test: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +27,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.1.2
   mobx_codegen: ^2.0.4
+  mockito: ^5.3.2
 
 flutter:
   uses-material-design: true
