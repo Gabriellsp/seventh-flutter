@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:seventh_prova_flutter/app/features/login/login_repository.dart';
+import 'package:seventh_prova_flutter/app/features/login/login_repository_interface.dart';
 import 'package:seventh_prova_flutter/app/models/login_model.dart';
 import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 import 'package:seventh_prova_flutter/app/util/enum/http_error.dart';
@@ -9,7 +9,7 @@ part 'login_store.g.dart';
 class LoginStore = LoginStoreBase with _$LoginStore;
 
 abstract class LoginStoreBase with Store {
-  final LoginRepository repository;
+  final LoginRepositoryInterface repository;
   LoginStoreBase(this.repository);
 
   @observable
