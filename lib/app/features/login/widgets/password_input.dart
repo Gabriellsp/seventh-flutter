@@ -10,7 +10,7 @@ class PasswordInput extends StatelessWidget {
     var store = Modular.get<LoginStore>();
     return TextFormField(
       decoration: const InputDecoration(
-        labelText: 'Senha',
+        labelText: 'Password',
         icon: Icon(
           Icons.lock,
         ),

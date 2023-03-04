@@ -10,7 +10,7 @@ class UserInput extends StatelessWidget {
     var store = Modular.get<LoginStore>();
     return TextFormField(
       decoration: const InputDecoration(
-        labelText: 'Usuário',
+        labelText: 'Username',
         icon: Icon(
           Icons.person,
         ),

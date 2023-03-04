@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
       {
-        "name": "Seventh-Test",
+        "name": "Seventh",
         "program": "lib/main.dart",
         "request": "launch",
         "type": "dart",

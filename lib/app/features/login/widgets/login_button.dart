@@ -24,7 +24,7 @@ class LoginButton extends StatelessWidget {
                       child: CircularProgressIndicator(strokeWidth: 2.0),
                     )
                   : Text(
-                      'Entrar'.toUpperCase(),
+                      'Login'.toUpperCase(),
                       textAlign: TextAlign.center,
                     ),
             ));
