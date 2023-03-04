@@ -3,7 +3,6 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_store.dart';
 import 'package:seventh_prova_flutter/app/features/home/widgets/widgets.dart';
-import 'package:seventh_prova_flutter/app/shared/theme/app_color.dart';
 import 'package:seventh_prova_flutter/app/shared/widgets/custom_snackbar.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,23 +38,21 @@ class _HomePageState extends State<HomePage> {
           });
         }
         return Scaffold(
-          appBar: AppBar(
-            title: Center(
-              child: Text(
-                'Video Player',
-                style: Theme.of(context).textTheme.titleLarge,
+            appBar: AppBar(
+              title: Center(
+                child: Text(
+                  'Video Player',
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
               ),
             ),
-          ),
-          body: store.isLoading
-              ? const Center(
-                  child: CircularProgressIndicator(strokeWidth: 2.0),
-                )
-              : Center(
-                  child: VideoPlayer(
-                  video: store.video,
-                )),
-        );
+            body: Center(
+              child: store.isLoading
+                  ? const CircularProgressIndicator(strokeWidth: 2.0)
+                  : VideoPlayer(
+                      video: store.video,
+                    ),
+            ));
       },
     );
   }

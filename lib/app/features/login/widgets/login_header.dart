@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:seventh_prova_flutter/app/shared/widgets/headline1.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({
