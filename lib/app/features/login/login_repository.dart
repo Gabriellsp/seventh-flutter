@@ -6,8 +6,8 @@ class LoginRepository {
   LoginRepository(this.client);
 
   Future<void> login(LoginModel login) async {
-    var aux = LoginModel(username: "candidato-seventh", password: "8n5zSrYq");
-    await client.login(aux);
+    // var aux = LoginModel(username: "candidato-seventh", password: "8n5zSrYq");
+    await client.login(login);
   }
 
   Future<bool> userHasToken() async {

@@ -9,11 +9,10 @@ class UserInput extends StatelessWidget {
   Widget build(BuildContext context) {
     var store = Modular.get<LoginStore>();
     return TextFormField(
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
         labelText: 'Usuário',
         icon: Icon(
           Icons.person,
-          color: Theme.of(context).primaryColorLight,
         ),
       ),
       keyboardType: TextInputType.emailAddress,

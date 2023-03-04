@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
-  static const Map<int, Color> primaryBlue = {
-    50: Color.fromRGBO(0, 0, 255, 0.1),
-    100: Color.fromRGBO(0, 0, 255, 0.2),
-    200: Color.fromRGBO(0, 0, 255, .3),
-    300: Color.fromRGBO(0, 0, 255, .4),
-    400: Color.fromRGBO(0, 0, 255, .5),
-    500: Color.fromRGBO(0, 0, 255, .6),
-    600: Color.fromRGBO(0, 0, 255, .7),
-    700: Color.fromRGBO(0, 0, 255, .8),
-    800: Color.fromRGBO(0, 0, 255, .9),
-    900: Color.fromRGBO(0, 0, 255, 1),
+  static const Map<int, Color> primarySwatch = {
+    50: Color.fromRGBO(0, 255, 221, 0.1),
+    100: Color.fromRGBO(0, 255, 221, 0.2),
+    200: Color.fromRGBO(0, 255, 221, 0.3),
+    300: Color.fromRGBO(0, 255, 221, .4),
+    400: Color.fromRGBO(0, 255, 221, .5),
+    500: Color.fromRGBO(0, 255, 221, .6),
+    600: Color.fromRGBO(0, 255, 221, .7),
+    700: Color.fromRGBO(0, 255, 221, .8),
+    800: Color.fromRGBO(0, 255, 221, .9),
+    900: Color.fromRGBO(0, 255, 221, 1),
   };
 
   static const MaterialColor primaryColor =
-      MaterialColor(0xFF0000FF, primaryBlue);
+      MaterialColor(0xFF00B4FF, primarySwatch);
 
-  static const Color scaffoldBackgroundColor = Color(0xff202020);
+  static const Color backgroundColor = Color.fromARGB(119, 50, 50, 50);
+
+  static const Color errorColor = Color.fromARGB(255, 180, 0, 0);
 }
