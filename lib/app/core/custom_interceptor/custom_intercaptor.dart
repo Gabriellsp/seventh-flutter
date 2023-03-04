@@ -1,9 +1,7 @@
-import 'dart:io';
-
 import 'package:http_interceptor/http_interceptor.dart';
 import 'package:seventh_prova_flutter/app/core/auth/storage/auth_storage.dart';
 
-class WeatherApiInterceptor implements InterceptorContract {
+class AutheticationInterceptor implements InterceptorContract {
   @override
   Future<RequestData> interceptRequest({required RequestData data}) async {
     try {

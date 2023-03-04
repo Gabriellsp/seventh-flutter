@@ -1,4 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:seventh_prova_flutter/app/core/custom_interceptor/custom_intercaptor.dart';
+import 'package:seventh_prova_flutter/app/features/home/home_page.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_repository.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_store.dart';
 
@@ -13,11 +15,17 @@ class HomeModule extends Module {
         Bind.lazySingleton((i) => HttpClient(i())),
         Bind.lazySingleton(
           (i) => InterceptedClient.build(
-            interceptors: [],
+            interceptors: [
+              AutheticationInterceptor(),
+            ],
           ),
         ),
       ];
 
   @override
-  List<ModularRoute> get routes => [];
+  List<ModularRoute> get routes => [
+        ChildRoute('/',
+            child: (_, args) => const HomePage(),
+            transition: TransitionType.noTransition),
+      ];
 }

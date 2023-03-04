@@ -15,7 +15,7 @@ class HomeRepository {
         path: path,
         method: MethodHttp.get,
       );
-      return VideoModel.fromJson(jsonDecode(result.body));
+      return VideoModel.fromJson(result);
     } on Exception {
       throw Exception("Erro ao buscar o vídeo, tente novamente mais tarde!");
     }

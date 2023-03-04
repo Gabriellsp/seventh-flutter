@@ -6,6 +6,7 @@ class LoginRepository {
   LoginRepository(this.client);
 
   Future<void> login(LoginModel login) async {
-    await client.login(login);
+    var aux = LoginModel(username: "candidato-seventh", password: "8n5zSrYq");
+    await client.login(aux);
   }
 }
