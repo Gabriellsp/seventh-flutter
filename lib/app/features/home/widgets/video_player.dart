@@ -23,10 +23,13 @@ class _VideoPlayerState extends State<VideoPlayer> {
       aspectRatio: 16 / 9,
       autoInitialize: true,
       errorBuilder: (context, errorMessage) {
-        return Center(
-          child: Text(
-            errorMessage,
-            style: const TextStyle(color: Colors.white),
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Center(
+            child: Text(
+              errorMessage,
+              style: const TextStyle(color: Colors.white),
+            ),
           ),
         );
       },

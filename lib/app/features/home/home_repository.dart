@@ -8,15 +8,11 @@ class HomeRepository implements HomeRepositoryInterface {
   HomeRepository(this.client);
   @override
   Future<VideoModel> getVideo(String fileName) async {
-    try {
-      final path = "video/$fileName";
-      final result = await client.request(
-        path: path,
-        method: MethodHttp.get,
-      );
-      return VideoModel.fromJson(result);
-    } on Exception {
-      throw Exception("Erro ao buscar o vídeo, tente novamente mais tarde!");
-    }
+    final path = "video/$fileName";
+    final result = await client.request(
+      path: path,
+      method: MethodHttp.get,
+    );
+    return VideoModel.fromJson(result);
   }
 }
