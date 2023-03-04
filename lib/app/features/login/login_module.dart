@@ -5,7 +5,7 @@ import 'package:seventh_prova_flutter/app/core/interceptors/authentication_inter
 import 'package:seventh_prova_flutter/app/core/interceptors/error_inteceptor.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_page.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_page.dart';
-import 'package:seventh_prova_flutter/app/features/login/login_repository.dart';
+import 'package:seventh_prova_flutter/app/features/login/repository/login_repository.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_store.dart';
 import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 

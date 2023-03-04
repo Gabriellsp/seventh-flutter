@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:seventh_prova_flutter/app/features/home/home_repository_interface.dart';
+import 'package:seventh_prova_flutter/app/features/home/repository/home_repository_interface.dart';
 import 'package:seventh_prova_flutter/app/models/video_model.dart';
 import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 import 'package:seventh_prova_flutter/app/util/enum/http_error.dart';

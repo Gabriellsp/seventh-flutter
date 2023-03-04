@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/core/interceptors/authentication_intercaptor.dart';
 import 'package:seventh_prova_flutter/app/core/interceptors/error_inteceptor.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_page.dart';
-import 'package:seventh_prova_flutter/app/features/home/home_repository.dart';
+import 'package:seventh_prova_flutter/app/features/home/repository/home_repository.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_store.dart';
 
 import 'package:seventh_prova_flutter/app/core/http/http_client.dart';

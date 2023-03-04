@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:seventh_prova_flutter/app/features/login/login_repository_interface.dart';
+import 'package:seventh_prova_flutter/app/features/login/repository/login_repository_interface.dart';
 import 'package:seventh_prova_flutter/app/models/login_model.dart';
 import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 part 'login_store.g.dart';
