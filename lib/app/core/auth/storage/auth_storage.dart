@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'dart:convert' show jsonEncode, jsonDecode;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:seventh_prova_flutter/app/core/auth/storage/auth_storage_interface.dart';
 import 'package:seventh_prova_flutter/app/models/token_model.dart';
 
-class AuthStorage {
+class AuthStorage implements AuthStorageInterface {
   static AuthStorage? _instance;
   final FlutterSecureStorage _secureStorage;
   final String _tokenId = "token";
@@ -15,12 +16,14 @@ class AuthStorage {
     return _instance!;
   }
 
+  @override
   Future<void> saveTokenToStorage(TokenModel token) async {
     var data = token.toJson();
     var json = jsonEncode(data);
     await _secureStorage.write(key: _tokenId, value: json);
   }
 
+  @override
   Future<TokenModel> getTokenFromStorage() async {
     var json = await _secureStorage.read(key: _tokenId);
     if (json == null) return TokenModel(token: "");
@@ -32,6 +35,7 @@ class AuthStorage {
     }
   }
 
+  @override
   Future clearToken() async {
     await _secureStorage.delete(key: _tokenId);
   }

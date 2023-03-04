@@ -4,14 +4,10 @@ import 'package:seventh_prova_flutter/app/core/auth/storage/auth_storage.dart';
 class AutheticationInterceptor implements InterceptorContract {
   @override
   Future<RequestData> interceptRequest({required RequestData data}) async {
-    try {
-      final storage = AuthStorage.instance;
-      final tokenStorage = await storage.getTokenFromStorage();
-      data.headers["x-access-token"] = tokenStorage.token!;
-    } catch (e) {
-      print(e);
-    }
-    print(data.params);
+    final storage = AuthStorage.instance;
+    final tokenStorage = await storage.getTokenFromStorage();
+    data.headers["x-access-token"] = tokenStorage.token!;
+
     return data;
   }
 

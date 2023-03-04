@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_store.dart';
-import 'package:seventh_prova_flutter/app/features/home/widgets/video_player.dart';
+import 'package:seventh_prova_flutter/app/features/home/widgets/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
