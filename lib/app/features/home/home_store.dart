@@ -1,6 +1,8 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_repository_interface.dart';
 import 'package:seventh_prova_flutter/app/models/video_model.dart';
+import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 import 'package:seventh_prova_flutter/app/util/enum/http_error.dart';
 part 'home_store.g.dart';
 
@@ -18,17 +20,7 @@ abstract class HomeStoreBase with Store {
   @observable
   bool _isLoading = true;
 
-  @observable
-  String _messageError = "";
-
-  @observable
-  bool _showMessageError = false;
-
   bool get isLoading => _isLoading;
-
-  String get messageError => _messageError;
-
-  bool get showMessageError => _showMessageError;
 
   @action
   void setIsLoading(bool value) {
@@ -36,31 +28,12 @@ abstract class HomeStoreBase with Store {
   }
 
   @action
-  void setShowMessage(bool value) {
-    _showMessageError = value;
-  }
-
-  @action
-  void setMessageError(String value) {
-    _showMessageError = true;
-    _messageError = value;
-  }
-
-  @action
   Future<void> initialize() async {
     try {
       _video = await repository.getVideo(_videoName);
     } on HttpError catch (error) {
-      switch (error) {
-        case HttpError.unauthorized:
-          setMessageError("Sessão expirada! Faça o login novamente...");
-          break;
-        case HttpError.notFound:
-          setMessageError("Video não encontrado!");
-          break;
-        default:
-          setMessageError("Error ao buscar url do vídeo!");
-          break;
+      if (error == HttpError.unauthorized) {
+        Modular.to.pushNamedAndRemoveUntil(AppRoutes.initial, (p0) => false);
       }
     }
     setIsLoading(false);

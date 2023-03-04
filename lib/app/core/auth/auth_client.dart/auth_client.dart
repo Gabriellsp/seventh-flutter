@@ -9,8 +9,8 @@ import 'package:seventh_prova_flutter/app/util/enum/method_http.dart';
 class AuthClient implements AuthClientInterface {
   final HttpClient _httpClient;
   final AuthStorage _storage;
-  AuthClient()
-      : _httpClient = HttpClient(Client()),
+  AuthClient(Client client)
+      : _httpClient = HttpClient(client),
         _storage = AuthStorage.instance;
 
   @override

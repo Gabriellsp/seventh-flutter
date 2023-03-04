@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_store.dart';
+import 'package:seventh_prova_flutter/app/shared/global_store/global_store.dart';
 import 'package:seventh_prova_flutter/app/shared/widgets/custom_snackbar.dart';
 import 'widgets/widgets.dart';
 
@@ -24,19 +25,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Observer(builder: (_) {
-      if (store.showMessageError) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(
-                CustomSnackbar(
-                  message: store.messageError,
-                ),
-              )
-              .closed
-              .then((value) => store.setShowMessage(false));
-        });
-      }
-
       return Scaffold(
         body: Container(
           decoration: const BoxDecoration(

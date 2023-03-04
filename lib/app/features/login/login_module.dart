@@ -1,5 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:http_interceptor/http/intercepted_client.dart';
 import 'package:seventh_prova_flutter/app/core/auth/auth_client.dart/auth_client.dart';
+import 'package:seventh_prova_flutter/app/core/interceptors/authentication_intercaptor.dart';
+import 'package:seventh_prova_flutter/app/core/interceptors/error_inteceptor.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_page.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_page.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_repository.dart';
@@ -11,7 +14,15 @@ class LoginModule extends Module {
   List<Bind<Object>> get binds => [
         Bind.lazySingleton((i) => LoginStore(i())),
         Bind.lazySingleton((i) => LoginRepository(i())),
-        Bind.lazySingleton((i) => AuthClient()),
+        Bind.lazySingleton((i) => AuthClient(i())),
+        Bind.lazySingleton(
+          (i) => InterceptedClient.build(
+            interceptors: [
+              AutheticationInterceptor(),
+              ErrorInterceptor(),
+            ],
+          ),
+        )
       ];
 
   @override

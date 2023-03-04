@@ -43,38 +43,6 @@ mixin _$HomeStore on HomeStoreBase, Store {
     });
   }
 
-  late final _$_messageErrorAtom =
-      Atom(name: 'HomeStoreBase._messageError', context: context);
-
-  @override
-  String get _messageError {
-    _$_messageErrorAtom.reportRead();
-    return super._messageError;
-  }
-
-  @override
-  set _messageError(String value) {
-    _$_messageErrorAtom.reportWrite(value, super._messageError, () {
-      super._messageError = value;
-    });
-  }
-
-  late final _$_showMessageErrorAtom =
-      Atom(name: 'HomeStoreBase._showMessageError', context: context);
-
-  @override
-  bool get _showMessageError {
-    _$_showMessageErrorAtom.reportRead();
-    return super._showMessageError;
-  }
-
-  @override
-  set _showMessageError(bool value) {
-    _$_showMessageErrorAtom.reportWrite(value, super._showMessageError, () {
-      super._showMessageError = value;
-    });
-  }
-
   late final _$initializeAsyncAction =
       AsyncAction('HomeStoreBase.initialize', context: context);
 
@@ -92,28 +60,6 @@ mixin _$HomeStore on HomeStoreBase, Store {
         name: 'HomeStoreBase.setIsLoading');
     try {
       return super.setIsLoading(value);
-    } finally {
-      _$HomeStoreBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void setShowMessage(bool value) {
-    final _$actionInfo = _$HomeStoreBaseActionController.startAction(
-        name: 'HomeStoreBase.setShowMessage');
-    try {
-      return super.setShowMessage(value);
-    } finally {
-      _$HomeStoreBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void setMessageError(String value) {
-    final _$actionInfo = _$HomeStoreBaseActionController.startAction(
-        name: 'HomeStoreBase.setMessageError');
-    try {
-      return super.setMessageError(value);
     } finally {
       _$HomeStoreBaseActionController.endAction(_$actionInfo);
     }
