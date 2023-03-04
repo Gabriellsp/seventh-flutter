@@ -97,6 +97,15 @@ mixin _$LoginStore on LoginStoreBase, Store {
     return _$loginAsyncAction.run(() => super.login());
   }
 
+  late final _$verifyUserHasTokenAsyncAction =
+      AsyncAction('LoginStoreBase.verifyUserHasToken', context: context);
+
+  @override
+  Future<void> verifyUserHasToken() {
+    return _$verifyUserHasTokenAsyncAction
+        .run(() => super.verifyUserHasToken());
+  }
+
   late final _$LoginStoreBaseActionController =
       ActionController(name: 'LoginStoreBase', context: context);
 

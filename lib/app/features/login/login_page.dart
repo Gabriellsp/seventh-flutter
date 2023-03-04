@@ -8,12 +8,24 @@ import 'package:seventh_prova_flutter/app/shared/widgets/headline1.dart';
 
 import 'widgets/widgets.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  var store = Modular.get<LoginStore>();
+
+  @override
+  void initState() {
+    super.initState();
+    store.verifyUserHasToken();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var store = Modular.get<LoginStore>();
     return Observer(
       builder: (_) {
         if (store.showMessageError) {

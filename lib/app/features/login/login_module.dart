@@ -9,7 +9,7 @@ import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 class LoginModule extends Module {
   @override
   List<Bind<Object>> get binds => [
-        Bind.singleton((i) => LoginStore(i())),
+        Bind.lazySingleton((i) => LoginStore(i())),
         Bind.lazySingleton((i) => LoginRepository(i())),
         Bind.lazySingleton((i) => AuthClient()),
       ];

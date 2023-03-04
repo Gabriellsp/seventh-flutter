@@ -86,4 +86,11 @@ abstract class LoginStoreBase with Store {
     }
     setIsLoading(false);
   }
+
+  @action
+  Future<void> verifyUserHasToken() async {
+    if (await repository.userHasToken()) {
+      Modular.to.pushNamedAndRemoveUntil(AppRoutes.home, (p0) => false);
+    }
+  }
 }

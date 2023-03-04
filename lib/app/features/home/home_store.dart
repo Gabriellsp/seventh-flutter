@@ -55,6 +55,9 @@ abstract class HomeStoreBase with Store {
         case HttpError.unauthorized:
           setMessageError("Sessão expirada! Faça o login novamente...");
           break;
+        case HttpError.notFound:
+          setMessageError("Video não encontrado!");
+          break;
         default:
           setMessageError("Error ao buscar url do vídeo!");
           break;

@@ -9,4 +9,12 @@ class LoginRepository {
     var aux = LoginModel(username: "candidato-seventh", password: "8n5zSrYq");
     await client.login(aux);
   }
+
+  Future<bool> userHasToken() async {
+    final userToken = await client.loadTokenFromCache();
+    if (userToken.token!.isEmpty) {
+      return false;
+    }
+    return true;
+  }
 }

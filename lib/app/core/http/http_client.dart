@@ -51,6 +51,8 @@ class HttpClient implements HttpClientInterface {
         throw HttpError.badRequest;
       case 401:
         throw HttpError.unauthorized;
+      case 404:
+        throw HttpError.notFound;
       default:
         throw HttpError.serverError;
     }

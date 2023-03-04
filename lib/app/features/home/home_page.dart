@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           ),
           body: store.isLoading
               ? const Center(
-                  child: CircularProgressIndicator(),
+                  child: CircularProgressIndicator(strokeWidth: 2.0),
                 )
               : Center(
                   child: Text(
