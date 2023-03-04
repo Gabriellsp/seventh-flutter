@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_store.dart';
-import 'package:seventh_prova_flutter/app/shared/global_store/global_store.dart';
-import 'package:seventh_prova_flutter/app/shared/widgets/custom_snackbar.dart';
 import 'widgets/widgets.dart';
 
 class LoginPage extends StatefulWidget {
