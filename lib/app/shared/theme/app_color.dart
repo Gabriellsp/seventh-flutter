@@ -17,7 +17,7 @@ class AppColor {
   static const MaterialColor primaryColor =
       MaterialColor(0xFF00B4FF, primarySwatch);
 
-  static const Color backgroundColor = Color.fromARGB(119, 50, 50, 50);
+  static const Color backgroundColor = Color.fromARGB(180, 45, 45, 45);
 
   static const Color errorColor = Color.fromARGB(255, 180, 0, 0);
 }
