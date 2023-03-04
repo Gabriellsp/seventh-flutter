@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/home/home_store.dart';
+import 'package:seventh_prova_flutter/app/features/home/widgets/video_player.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,16 +40,15 @@ class _HomePageState extends State<HomePage> {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Video Seventh'),
+            title: const Center(child: Text('Video Seventh')),
           ),
           body: store.isLoading
               ? const Center(
                   child: CircularProgressIndicator(strokeWidth: 2.0),
                 )
               : Center(
-                  child: Text(
-                  store.video.url!,
-                  style: const TextStyle(color: Colors.white),
+                  child: VideoPlayer(
+                  video: store.video,
                 )),
         );
       },
