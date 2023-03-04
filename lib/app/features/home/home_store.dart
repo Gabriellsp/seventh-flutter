@@ -11,7 +11,9 @@ abstract class HomeStoreBase with Store {
   HomeStoreBase(this.repository);
 
   final String _videoName = "bunny.mp4";
-  VideoModel video = VideoModel(url: "");
+
+  @readonly
+  VideoModel _video = VideoModel(url: "");
 
   @observable
   bool _isLoading = true;
@@ -44,9 +46,10 @@ abstract class HomeStoreBase with Store {
     _messageError = value;
   }
 
+  @action
   Future<void> initialize() async {
     try {
-      video = await repository.getVideo(_videoName);
+      _video = await repository.getVideo(_videoName);
     } on HttpError catch (error) {
       switch (error) {
         case HttpError.unauthorized:

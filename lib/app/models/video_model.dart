@@ -4,12 +4,12 @@ class VideoModel {
   VideoModel({this.url});
 
   VideoModel.fromJson(Map<String, dynamic> json) {
-    url = json['token'];
+    url = json['url'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['token'] = url;
+    data['url'] = url;
     return data;
   }
 }
