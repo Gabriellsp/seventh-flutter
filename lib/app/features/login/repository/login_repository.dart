@@ -8,8 +8,7 @@ class LoginRepository implements LoginRepositoryInterface {
 
   @override
   Future<void> login(LoginModel login) async {
-    var aux = LoginModel(username: "candidato-seventh", password: "8n5zSrYq");
-    await client.login(aux);
+    await client.login(login);
   }
 
   @override
