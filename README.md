@@ -19,15 +19,16 @@ Aplicativo Flutter com login de usuário e player de vídeo utilizando arquitetu
 <img src="https://user-images.githubusercontent.com/69534679/222989928-2a37d101-938f-412e-9bef-6481b2b14469.png" width="20%" height="auto">
 
 - API retornando 401
-<img src="https://user-images.githubusercontent.com/69534679/222989956-94f40fa9-f232-4176-ade4-55d139df3154.png" width="20%" height="auto">
-<img src="https://user-images.githubusercontent.com/69534679/222989961-eaffe64b-ca3a-4f83-b4ba-a342418f71e3.png" width="20%" height="auto">
+
+<img src="https://user-images.githubusercontent.com/69534679/222989956-94f40fa9-f232-4176-ade4-55d139df3154.png" width="20%" height="auto"><img src="https://user-images.githubusercontent.com/69534679/222989961-eaffe64b-ca3a-4f83-b4ba-a342418f71e3.png" width="20%" height="auto">
+
 
 - API retornando 404
 <img src="https://user-images.githubusercontent.com/69534679/222989994-036d1d1c-f591-4f76-9e21-75714eb7f390.png" width="20%" height="auto">
 
 - API retornando 500
-<img src="https://user-images.githubusercontent.com/69534679/222990044-c9dbb5db-9b4e-4379-927d-8692edb83158.png" width="20%" height="auto">
-<img src="https://user-images.githubusercontent.com/69534679/222990029-7c3080b6-a693-4c54-8f38-387002f71032.png" width="20%" height="auto">
+
+<img src="https://user-images.githubusercontent.com/69534679/222990044-c9dbb5db-9b4e-4379-927d-8692edb83158.png" width="20%" height="auto"><img src="https://user-images.githubusercontent.com/69534679/222990029-7c3080b6-a693-4c54-8f38-387002f71032.png" width="20%" height="auto">
 
 ## Bibliotecas utilizadas
 - flutter_mobx e mobx: Essas bibliotecas foram utilizadas para fazer o gerenciamento de estado da aplicação.
