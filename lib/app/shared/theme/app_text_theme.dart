@@ -6,6 +6,16 @@ class AppTextTheme extends TextTheme {
           titleLarge: const TextStyle(
             color: Colors.white,
             fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+          bodySmall: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+          ),
+          bodyMedium: const TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
           ),
         );
 }

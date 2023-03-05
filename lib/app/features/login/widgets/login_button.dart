@@ -26,6 +26,7 @@ class LoginButton extends StatelessWidget {
                   : Text(
                       'Login'.toUpperCase(),
                       textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
             ));
       },
