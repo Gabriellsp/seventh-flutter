@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
             body: Center(
               child: homeStore.isLoading
                   ? const CircularProgressIndicator(strokeWidth: 2.0)
-                  : VideoPlayer(
+                  : CustomVideoPlayer(
                       video: homeStore.video,
                     ),
             ));

@@ -1,1 +1,1 @@
-export './video_player.dart';
+export 'custom_video_player.dart';
