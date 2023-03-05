@@ -20,8 +20,12 @@ class ErrorInterceptor implements InterceptorContract {
       case 400:
       case 401:
       case 404:
-        final response = ResponseError.fromJson(jsonDecode(data.body!));
-        _globalStore.setMessageError(response.message!);
+        try {
+          final response = ResponseError.fromJson(jsonDecode(data.body!));
+          _globalStore.setMessageError(response.message!);
+        } catch (_) {
+          _globalStore.setMessageError("Unexpected error! Try again later ...");
+        }
         break;
       default:
         _globalStore.setMessageError("Unexpected error! Try again later ...");
