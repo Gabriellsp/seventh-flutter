@@ -18,7 +18,7 @@ class LoginContent extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Entrar",
+                "Login",
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
@@ -26,7 +26,7 @@ class LoginContent extends StatelessWidget {
               height: 300,
               width: 300,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(16),
                 color: AppColor.backgroundColor,
               ),
               child: child,
