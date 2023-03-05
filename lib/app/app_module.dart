@@ -7,7 +7,7 @@ import 'package:seventh_prova_flutter/app/shared/routes/app_routes.dart';
 class AppModule extends Module {
   @override
   List<Bind> get binds => [
-        Bind.singleton((i) => GlobalStore()),
+        Bind.singleton<GlobalStore>((i) => GlobalStore()),
       ];
 
   @override
