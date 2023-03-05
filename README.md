@@ -29,7 +29,7 @@ Aplicativo Flutter com login de usuário e player de vídeo utilizando arquitetu
 <img src="https://user-images.githubusercontent.com/69534679/222990044-c9dbb5db-9b4e-4379-927d-8692edb83158.png" width="20%" height="auto">
 <img src="https://user-images.githubusercontent.com/69534679/222990029-7c3080b6-a693-4c54-8f38-387002f71032.png" width="20%" height="auto">
 
-## Bibliotecas utilizaas
+## Bibliotecas utilizadas
 - flutter_mobx e mobx: Essas bibliotecas foram utilizadas para fazer o gerenciamento de estado da aplicação.
 - flutter_modular: Injeção de dependência e gerenciamento de rotas da aplicação.
 - http: Usado para fazer chamadas http (Comunicação com API).
