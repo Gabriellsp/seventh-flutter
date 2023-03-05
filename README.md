@@ -6,7 +6,7 @@ Aplicativo Flutter com login de usuário e player de vídeo utilizando arquitetu
 
 - 3.3.10
 
-## Telas
+## Telas desenvolvidas
 
 - LoginPage
 <img src="https://user-images.githubusercontent.com/69534679/222989325-794668fc-eebd-464e-9f89-aa5fcc3f1ee1.png" width="20%" height="auto">
@@ -30,13 +30,15 @@ Aplicativo Flutter com login de usuário e player de vídeo utilizando arquitetu
 
 <img src="https://user-images.githubusercontent.com/69534679/222990044-c9dbb5db-9b4e-4379-927d-8692edb83158.png" width="20%" height="auto"><img src="https://user-images.githubusercontent.com/69534679/222990029-7c3080b6-a693-4c54-8f38-387002f71032.png" width="20%" height="auto">
 
-## Bibliotecas utilizadas
+## Dependências utilizadas
 - flutter_mobx e mobx: Essas bibliotecas foram utilizadas para fazer o gerenciamento de estado da aplicação.
 - flutter_modular: Injeção de dependência e gerenciamento de rotas da aplicação.
 - http: Usado para fazer chamadas http (Comunicação com API).
 - flutter_secure_storage: Usado para fazer o cacheamento do token do usuário, permitindo que o usuário não precise digitar suas crendeciais toda vez que abrir o aplicativo. Essa biblioteca foi utilizada para armazenar e utilizar o token salvo do dispositivo do usuário após realizar o primeiro login com sucesso.
 - http_interceptor: Usado para injetar o token do usuário nas chamadas à api e para fazer o tratamento de erros. Foram criados dois interceptos, sendo eles: AutheticationInterceptor (responsável por inserir o x-access-token no header da chamada http) e ErrorInterceptor (responsável por capturar e gerenciar os erros obtidos pela API).
 - chewie e video_player: Essas bibliotecas fora utilizadas para renderizar o vídeo na aplicação no formato .m3u8
+
+## Dependências de desenvolvimento utilizadas
 - build_runner e mobx_codegen: Usado para gerar os arquivos necessários para implementar a gerencia de estados utilizando Mobx.
 - mocktail: Usado para criação de testes unitários e teste de widgets
 - modular_test: Usada para simular as injeções de dependência do Flutter Modular nos testes desenvolvidos.
