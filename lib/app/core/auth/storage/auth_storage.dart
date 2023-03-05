@@ -34,9 +34,4 @@ class AuthStorage implements AuthStorageInterface {
       throw Exception("Falha ao recarregar o token!"); // criar erro para isso
     }
   }
-
-  @override
-  Future clearToken() async {
-    await _secureStorage.delete(key: _tokenId);
-  }
 }

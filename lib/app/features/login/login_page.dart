@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:seventh_prova_flutter/app/features/login/login_store.dart';
 import 'widgets/widgets.dart';
