@@ -38,7 +38,7 @@ Aplicativo Flutter com login de usuário e player de vídeo utilizando arquitetu
 - chewie e video_player: Essas bibliotecas fora utilizadas para renderizar o vídeo na aplicação no formato .m3u8
 - build_runner e mobx_codegen: Usado para gerar os arquivos necessários para implementar a gerencia de estados utilizando Mobx.
 - mocktail: Usado para criação de testes unitários e teste de widgets
-- modular_test: Usada para mockar as injeções de dependência do Flutter Modular.
+- modular_test: Usada para simular as injeções de dependência do Flutter Modular nos testes desenvolvidos.
 
 
 
