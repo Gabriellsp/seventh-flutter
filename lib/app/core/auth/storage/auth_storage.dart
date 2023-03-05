@@ -17,8 +17,8 @@ class AuthStorage implements AuthStorageInterface {
   }
 
   @override
-  Future<void> saveTokenToStorage(TokenModel token) async {
-    var data = token.toJson();
+  Future<void> saveTokenToStorage(TokenModel? token) async {
+    var data = token!.toJson();
     var json = jsonEncode(data);
     await _secureStorage.write(key: _tokenId, value: json);
   }

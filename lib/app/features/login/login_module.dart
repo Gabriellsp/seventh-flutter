@@ -16,11 +16,10 @@ class LoginModule extends Module {
   List<Bind<Object>> get binds => [
         Bind.lazySingleton<LoginStore>((i) => LoginStore(i())),
         Bind.lazySingleton<LoginRepository>((i) => LoginRepository(i())),
-        Bind.lazySingleton<AuthClient>((i) => AuthClient(i())),
+        Bind.lazySingleton<AuthClient>((i) => AuthClient(i(), i())),
         Bind.lazySingleton<InterceptedClient>(
           (i) => InterceptedClient.build(
             interceptors: [
-              AutheticationInterceptor(i()),
               ErrorInterceptor(Modular.get<GlobalStore>()),
             ],
           ),
