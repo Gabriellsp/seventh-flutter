@@ -201,7 +201,37 @@
     },
     {
       "name": "flutter_secure_storage",
-      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-4.2.1",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-8.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_linux-1.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_macos-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_platform_interface-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_web-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "rootUri": "file:///Users/dti/Documents/Development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage_windows-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -578,7 +608,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-05T00:54:00.899913Z",
+  "generated": "2023-03-05T11:23:34.931262Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }

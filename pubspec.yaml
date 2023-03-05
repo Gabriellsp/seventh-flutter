@@ -15,7 +15,7 @@ dependencies:
   flutter_mobx: ^2.0.2
   flutter_modular: ^5.0.3
   http: ^0.13.5
-  flutter_secure_storage: ^4.2.1
+  flutter_secure_storage: ^8.0.0
   http_interceptor: ^1.0.2
   chewie: ^1.4.0
   video_player: ^2.5.3
