@@ -31,11 +31,7 @@ abstract class HomeStoreBase with Store {
   Future<void> initialize() async {
     try {
       _video = await repository.getVideo(_videoName);
-    } on HttpError catch (error) {
-      if (error == HttpError.unauthorized) {
-        Modular.to.pushNamedAndRemoveUntil(AppRoutes.initial, (p0) => false);
-      }
-    }
+    } on HttpError catch (_) {}
     setIsLoading(false);
   }
 }

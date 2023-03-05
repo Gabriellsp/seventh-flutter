@@ -12,20 +12,16 @@ class CustomVideoPlayer extends StatefulWidget {
 }
 
 class CustomVideoPlayerState extends State<CustomVideoPlayer> {
-  late VideoPlayerController videoPlayerController;
-  late ChewieController _chewieController;
+  VideoPlayerController? _videoPlayerController;
+  ChewieController? _chewieController;
 
   @override
   void initState() {
     super.initState();
-    initVideoPlayer();
-  }
-
-  void initVideoPlayer() async {
-    videoPlayerController = VideoPlayerController.network(widget.video.url!);
-    await videoPlayerController.initialize();
+    _videoPlayerController = VideoPlayerController.network(widget.video.url!);
+    _videoPlayerController!.initialize();
     _chewieController = ChewieController(
-      videoPlayerController: videoPlayerController,
+      videoPlayerController: _videoPlayerController!,
       aspectRatio: 16 / 9,
       autoInitialize: true,
       errorBuilder: (context, errorMessage) {
@@ -44,8 +40,8 @@ class CustomVideoPlayerState extends State<CustomVideoPlayer> {
 
   @override
   void dispose() {
-    videoPlayerController.dispose();
-    _chewieController.dispose();
+    _videoPlayerController!.dispose();
+    _chewieController!.dispose();
     super.dispose();
   }
 
@@ -55,7 +51,7 @@ class CustomVideoPlayerState extends State<CustomVideoPlayer> {
       height: 280,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Chewie(controller: _chewieController),
+        child: Chewie(controller: _chewieController!),
       ),
     );
   }

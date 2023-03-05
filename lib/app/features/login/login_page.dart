@@ -22,39 +22,37 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Observer(builder: (_) {
-      return Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/login_background.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: LoginContent(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: Form(
-                    child: Column(
-                      children: const [
-                        UserInput(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 8.0, bottom: 32),
-                          child: PasswordInput(),
-                        ),
-                        LoginButton(),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/login_background.png"),
+            fit: BoxFit.cover,
           ),
         ),
-      );
-    });
+        child: LoginContent(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: Form(
+                  child: Column(
+                    children: const [
+                      UserInput(),
+                      Padding(
+                        padding: EdgeInsets.only(top: 8.0, bottom: 32),
+                        child: PasswordInput(),
+                      ),
+                      LoginButton(),
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
